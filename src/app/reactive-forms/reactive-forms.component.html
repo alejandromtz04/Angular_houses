@@ -1,0 +1,12 @@
+<p>Activity:
+    <input type="text" [formControl]="activity">
+</p>
+<p><button (click)="add()">Add</button></p>
+<ol>
+    @for(act of list; track $index) {
+        <li>
+            {{ act }} <a (click)="erase($index)" >Erase?</a>
+        </li>
+    }
+</ol>
+<p><button (click)="deleteAll()">Delete all activities?</button></p>

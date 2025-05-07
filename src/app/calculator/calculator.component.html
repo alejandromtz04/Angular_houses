@@ -1,0 +1,20 @@
+<h1>Calculator</h1>
+
+<h3>Chose the option for make an operation</h3>
+<input type="number" [(ngModel)]="num1" placeholder="Type a number">
+<input type="number" [(ngModel)]="num2" placeholder="Type  number">
+ 
+<div>
+    <p-button (click)="calculate('+')">Sum</p-button>
+    <p-button (click)="calculate('-')">Substract</p-button>
+    <p-button (click)="calculate('/')">Divide</p-button>
+    <p-button (click)="calculate('*')">Multiply</p-button>
+</div>
+
+<div *ngIf="result != null">
+    <p><strong>Result: </strong>{{ result }}</p>
+</div>
+
+<div>
+    <p style="color: red;">{{ error }}</p>
+</div>
