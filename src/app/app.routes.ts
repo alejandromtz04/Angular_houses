@@ -1,9 +1,5 @@
 import { Routes } from '@angular/router';
-import { CalculatorComponent } from './calculator/calculator.component';
-import { BindingComponent } from './binding/bindng.component';
 import { Component } from '@angular/core';
-import { DadoComponent } from './dado/dado.component';
-import { CronometroComponent } from './cronometro/cronometro.component';
 import { FormsComponent } from './forms/forms.component';
 import { ReactiveFormsComponent } from './reactive-forms/reactive-forms.component';
 import { FormGroupComponent } from './form-group/form-group.component';
@@ -19,23 +15,6 @@ export const routes: Routes = [
     {
         path: 'details/:id',
         component: DetailsComponent
-    },
-    {
-        path: 'calculator',
-        component: CalculatorComponent
-    },
-    {
-        path: 'binding',
-        component: BindingComponent
-    }
-    ,
-    {
-        path: 'dado',
-        component: DadoComponent
-    },
-    {
-        path: 'cronometer',
-        component: CronometroComponent
     },
     {
         path: 'forms',

@@ -4,10 +4,13 @@ import { HousingLocationComponent } from '../housing-location/housing-location.c
 import { Interface_HousingLocation } from '../interfaces/housing-location.interface';
 import { CommonModule } from '@angular/common';
 
+import { InputTextModule } from 'primeng/inputtext';
+import { ButtonModule } from 'primeng/button';
+
 
 @Component({
   selector: 'app-home',
-  imports: [HousingLocationComponent, CommonModule],
+  imports: [HousingLocationComponent, CommonModule, InputTextModule, ButtonModule],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css',
 })

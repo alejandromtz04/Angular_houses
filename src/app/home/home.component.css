@@ -1,47 +1,92 @@
+/* Main grid for results */
 .results {
     display: grid;
-    column-gap: 20px;
+    column-gap: 10px;
     row-gap: 20px;
-    grid-template-columns: repeat(auto-fill, minmax(100px, 400px));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     margin-top: 50px;
     justify-content: center;
+    margin: 0;
 }
 
+/* Wrapper around form */
+.container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 1rem;
+    box-sizing: border-box;
+}
+
+/* Search form layout */
+.search-form {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    max-width: 1000px;
+}
+
+/* Input styling */
 input[type="text"] {
-    border: solid 1px var(--primary-color);
+    border: 2px solid green;
     padding: 10px;
     border-radius: 8px;
-    margin-right: 4px;
-    display: inline-block;
-    width: 30%;
+    outline: none;
+    flex: 1 1 0;
+    min-width: 150px;
+    max-width: 800px;
+    box-sizing: border-box;
 }
 
+/* Button styling */
 button {
     padding: 10px;
-    border:solid 1px var;
-    border-color: #21a500;
+    border: 1px solid #21a500;
     border-radius: 8px;
     background: #ffffff;
     color: #000000;
-    border-radius: 8px;
+    white-space: nowrap;
+    cursor: pointer;
 }
 
+/* Medium devices */
 @media (min-width: 500px) and (max-width: 768px) {
     .results {
-        grid-template-columns: repeat(2,1fr);
+        grid-template-columns: repeat(2, 1fr);
     }
+
+    .search-form {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
     input[type="text"] {
-        width: 70%;
+        width: 100%;
+    }
+
+    button {
+        width: 100%;
     }
 }
 
+/* Small screens */
 @media (max-width: 499px) {
     .results {
         grid-template-columns: 1fr;
     }
-}
 
-search-form {
-    display: flex;
-    align-items: center;
+    .search-form {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    input[type="text"],
+    button {
+        width: 100%;
+    }
 }
